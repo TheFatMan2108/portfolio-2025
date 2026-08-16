@@ -18,6 +18,7 @@ import {
   savePortfolioData,
 } from "../../content/portfolio";
 import { translateTextMap } from "./translationService";
+import { writePortfolioDataFile } from "./portfolioDataRepository";
 import { withBasePath } from "../../utils/basePath";
 
 import type { Component } from "vue";
@@ -54,13 +55,30 @@ const iconComponents: Record<SocialIconName, Component> = {
 };
 
 const iconNames = Object.keys(iconComponents) as SocialIconName[];
+const SAVE_SUCCESS_MESSAGE = "Đã ghi đè src/content/portfolio-data.json. Bạn có thể commit và push ngay.";
+const SAVE_STATUS_STORAGE_KEY = "portfolio-admin-save-status";
+const SAVE_STATUS_DURATION_MS = 5_000;
+
+const consumeSavedStatus = (): string => {
+  if (typeof window === "undefined") return "";
+  const expiresAt = Number(window.sessionStorage.getItem(SAVE_STATUS_STORAGE_KEY));
+  if (!Number.isFinite(expiresAt) || expiresAt <= Date.now()) {
+    window.sessionStorage.removeItem(SAVE_STATUS_STORAGE_KEY);
+    return "";
+  }
+
+  window.setTimeout(() => window.sessionStorage.removeItem(SAVE_STATUS_STORAGE_KEY), expiresAt - Date.now());
+  return SAVE_SUCCESS_MESSAGE;
+};
+
 const activeAdminTab = ref<"portfolio" | "projects">("portfolio");
 const activeLocale = ref("en");
 const translationSourceLocale = ref("de");
 const isTranslating = ref(false);
 const draft = ref(clonePortfolioData());
 const importInput = ref<HTMLInputElement | null>(null);
-const status = ref("");
+const isSaving = ref(false);
+const status = ref(consumeSavedStatus());
 const statusType = ref<"success" | "error">("success");
 const activeLocalized = computed<LocalizedPortfolioData>(
   () =>
@@ -379,18 +397,29 @@ const removeLanguage = (languageIndex: number): void => {
   setStatus("Đã xóa ngôn ngữ khỏi bản nháp. Bấm “Lưu thay đổi” để áp dụng.");
 };
 
-const handleSave = (): void => {
+const handleSave = async (): Promise<void> => {
   if (!draft.value.languages.some((language) => language.enabled)) {
     setStatus("Cần bật ít nhất một ngôn ngữ để hiển thị ngoài Portfolio.", "error");
     return;
   }
 
-  if (savePortfolioData(draft.value)) {
-    setStatus("Đã lưu. Portfolio trên trình duyệt này đã dùng dữ liệu mới.");
+  if (!savePortfolioData(draft.value)) {
+    setStatus("Không thể lưu bản nháp. Hãy giảm dung lượng hình ảnh hoặc kiểm tra lại dữ liệu.", "error");
     return;
   }
 
-  setStatus("Không thể lưu. Hãy giảm dung lượng logo hoặc kiểm tra lại dữ liệu.", "error");
+  isSaving.value = true;
+  setStatus("Đang ghi dữ liệu vào portfolio-data.json...");
+  window.sessionStorage.setItem(SAVE_STATUS_STORAGE_KEY, String(Date.now() + SAVE_STATUS_DURATION_MS));
+  try {
+    await writePortfolioDataFile(draft.value);
+    setStatus(SAVE_SUCCESS_MESSAGE);
+  } catch (error) {
+    window.sessionStorage.removeItem(SAVE_STATUS_STORAGE_KEY);
+    setStatus(error instanceof Error ? error.message : "Không thể ghi file src/content/portfolio-data.json.", "error");
+  } finally {
+    isSaving.value = false;
+  }
 };
 
 const handleReset = (): void => {
@@ -693,8 +722,8 @@ const removeProjectMedia = (projectIndex: number, mediaIndex: number): void => {
     </header>
 
     <div class="admin-notice">
-      <strong>Cách xuất bản:</strong> “Lưu thay đổi” áp dụng ngay trên trình duyệt hiện tại. Để mọi người cùng thấy sau
-      khi deploy, tải JSON rồi thay file <code>src/content/portfolio-data.json</code>.
+      <strong>Cách xuất bản:</strong> “Lưu thay đổi” sẽ ghi đè trực tiếp file
+      <code>src/content/portfolio-data.json</code>. Sau đó commit và push để GitHub tự deploy.
     </div>
 
     <nav class="admin-tabs" aria-label="Khu vực quản trị">
@@ -1587,7 +1616,9 @@ const removeProjectMedia = (projectIndex: number, mediaIndex: number): void => {
           <button class="button button-ghost" type="button" @click="triggerImport">Nhập JSON</button>
           <button class="button button-ghost" type="button" @click="handleDownload">Tải JSON</button>
           <button class="button button-danger" type="button" @click="handleReset">Khôi phục</button>
-          <button class="button button-primary" type="submit">Lưu thay đổi</button>
+          <button class="button button-primary" type="submit" :disabled="isSaving">
+            {{ isSaving ? "Đang lưu..." : "Lưu thay đổi" }}
+          </button>
         </div>
       </div>
     </form>
