@@ -8,10 +8,16 @@ import { getAppPath } from "./utils/basePath";
 gsap.registerPlugin(ScrollTrigger);
 
 const normalizedPath = getAppPath(window.location.pathname);
-const isAdminPage = normalizedPath === "/admin";
-const rootModule = isAdminPage ? await import("./features/admin/AdminApp.vue") : await import("./App.vue");
+const isAdminPath = normalizedPath === "/admin";
+const isLocalAdminPage = import.meta.env.DEV && isAdminPath;
 
-if (isAdminPage) {
+if (!import.meta.env.DEV && isAdminPath) {
+  window.history.replaceState(null, "", import.meta.env.BASE_URL);
+}
+
+const rootModule = isLocalAdminPage ? await import("./features/admin/AdminApp.vue") : await import("./App.vue");
+
+if (isLocalAdminPage) {
   document.body.classList.remove("is-loading");
   document.querySelector(".preloader")?.remove();
 } else {
