@@ -1,0 +1,450 @@
+{
+  "version": 11,
+  "profile": {
+    "firstName": "David",
+    "lastName": "Heckhoff"
+  },
+  "languages": [
+    {
+      "code": "en",
+      "label": "EN",
+      "name": "English",
+      "enabled": true,
+      "baseLocale": "en",
+      "translationMode": "manual"
+    },
+    {
+      "code": "de",
+      "label": "DE",
+      "name": "Deutsch",
+      "enabled": true,
+      "baseLocale": "de",
+      "translationMode": "manual"
+    },
+    {
+      "code": "vi",
+      "label": "VI",
+      "name": "Tiếng Việt",
+      "enabled": false,
+      "baseLocale": "vi",
+      "translationMode": "manual"
+    }
+  ],
+  "localized": {
+    "vi": {
+      "jobTitle": "Nhà phát triển game",
+      "location": "Đức",
+      "aboutIntro": "Nhà phát triển web chuyên về các trải nghiệm web 3D tương tác và hệ thống thời gian thực.<br />Xây dựng các ứng dụng có khả năng mở rộng, hiệu suất cao kết hợp hình ảnh hấp dẫn với chức năng liền mạch bằng WebGL, TypeScript và Node.js.",
+      "aboutTagline": "Xây dựng các trải nghiệm 3D tương tác và hệ thống thời gian thực nhanh chóng, phản ứng nhanh và thú vị khi sử dụng.",
+      "contactHeadline": "Hãy cùng<br/>làm việc!",
+      "footerText": {
+        "privacyLabel": "Quyền riêng tư",
+        "legalLabel": "Pháp lý",
+        "conceptCreditLabel": "Khái niệm ban đầu bởi",
+        "musicCreditLabel": "Âm nhạc được sản xuất bởi",
+        "copyrightText": "© {year} {name}"
+      },
+      "typography": {
+        "bodyFontFamily": "\"Urbanist\", Arial, sans-serif",
+        "displayFontFamily": "\"ProFontWindows\", \"Courier New\", monospace"
+      },
+      "skills": [
+        "Three.js & WebGL",
+        "Node.js & WebSockets",
+        "React & Vue",
+        "Kubernetes & Redis",
+        "Real-time Multiplayer"
+      ]
+    },
+    "en": {
+      "jobTitle": "Web Developer",
+      "location": "Germany",
+      "aboutIntro": "Web developer specializing in interactive 3D web experiences and real-time systems.<br />Builds scalable, high-performance applications that combine engaging visuals with seamless functionality using WebGL, TypeScript, and Node.js.",
+      "aboutTagline": "Builds interactive 3D experiences and real-time systems that are fast, responsive, and fun to use.",
+      "contactHeadline": "Let's work<br/>together!",
+      "footerText": {
+        "privacyLabel": "Privacy",
+        "legalLabel": "Legal notice",
+        "conceptCreditLabel": "Originally created by",
+        "musicCreditLabel": "Music produced by",
+        "copyrightText": "© {year} {name}"
+      },
+      "typography": {
+        "bodyFontFamily": "\"Urbanist\", Arial, sans-serif",
+        "displayFontFamily": "\"ProFontWindows\", \"Courier New\", monospace"
+      },
+      "skills": [
+        "Three.js & WebGL",
+        "Node.js & WebSockets",
+        "React & Vue",
+        "Kubernetes & Redis",
+        "Real-time Multiplayer"
+      ]
+    },
+    "de": {
+      "jobTitle": "Webentwickler",
+      "location": "Deutschland",
+      "aboutIntro": "Webentwickler mit Schwerpunkt auf interaktiven 3D-Erlebnissen und Echtzeitanwendungen.<br/>Nutzt WebGL, TypeScript und Node.js um performante, skalierbare Apps zu erstellen, die fesselnde Visuals mit Funktionalität verbinden.",
+      "aboutTagline": "Erstellt interaktive 3D-Erlebnisse und Echtzeitsysteme, die schnell, responsiv und benutzerfreundlich sind.",
+      "contactHeadline": "Lass' uns zusammen arbeiten!",
+      "footerText": {
+        "privacyLabel": "Datenschutz",
+        "legalLabel": "Impressum",
+        "conceptCreditLabel": "Ursprünglich erstellt von",
+        "musicCreditLabel": "Musik produziert von",
+        "copyrightText": "© {year} {name}"
+      },
+      "typography": {
+        "bodyFontFamily": "\"Urbanist\", Arial, sans-serif",
+        "displayFontFamily": "\"ProFontWindows\", \"Courier New\", monospace"
+      },
+      "skills": [
+        "Three.js & WebGL",
+        "Node.js & WebSockets",
+        "React & Vue",
+        "Kubernetes & Redis",
+        "Echtzeit-Mehrspieler"
+      ]
+    }
+  },
+  "socials": [
+    {
+      "id": "email",
+      "label": "Email",
+      "url": "mailto:quangthuy.dev.game@gmail.com",
+      "icon": "mail",
+      "customIcon": "",
+      "enabled": true
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "url": "https://github.com/TheFatMan2108",
+      "icon": "github",
+      "customIcon": "",
+      "enabled": true
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/fatman2108/",
+      "icon": "linkedin",
+      "customIcon": "",
+      "enabled": true
+    },
+    {
+      "id": "x",
+      "label": "X",
+      "url": "https://x.com/F_tman2108",
+      "icon": "x",
+      "customIcon": "",
+      "enabled": true
+    }
+  ],
+  "technologyTags": [
+    {
+      "id": "three",
+      "label": "Three.js",
+      "backgroundColor": "#ed9c55",
+      "textColor": "#492708",
+      "borderColor": "transparent"
+    },
+    {
+      "id": "websockets",
+      "label": "WebSockets",
+      "backgroundColor": "#2674a4",
+      "textColor": "#ffffff",
+      "borderColor": "transparent"
+    },
+    {
+      "id": "react",
+      "label": "React",
+      "backgroundColor": "#61dafb",
+      "textColor": "#0f2e36",
+      "borderColor": "transparent"
+    },
+    {
+      "id": "redis",
+      "label": "Redis",
+      "backgroundColor": "#ce4036",
+      "textColor": "#ffffff",
+      "borderColor": "transparent"
+    },
+    {
+      "id": "gray",
+      "label": "Gray",
+      "backgroundColor": "#4b5563",
+      "textColor": "#ffffff",
+      "borderColor": "transparent"
+    },
+    {
+      "id": "html",
+      "label": "HTML",
+      "backgroundColor": "transparent",
+      "textColor": "var(--color-text-400)",
+      "borderColor": "var(--color-grayscale-400)"
+    },
+    {
+      "id": "css",
+      "label": "CSS",
+      "backgroundColor": "transparent",
+      "textColor": "var(--color-text-400)",
+      "borderColor": "var(--color-grayscale-400)"
+    },
+    {
+      "id": "javascript",
+      "label": "JavaScript",
+      "backgroundColor": "#ffdf4f",
+      "textColor": "#362d03",
+      "borderColor": "transparent"
+    },
+    {
+      "id": "node",
+      "label": "Node.js",
+      "backgroundColor": "#237d23",
+      "textColor": "#ffffff",
+      "borderColor": "transparent"
+    },
+    {
+      "id": "next",
+      "label": "Next.js",
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000",
+      "borderColor": "transparent"
+    },
+    {
+      "id": "kubernetes",
+      "label": "Kubernetes",
+      "backgroundColor": "#326ce5",
+      "textColor": "#ffffff",
+      "borderColor": "transparent"
+    },
+    {
+      "id": "postgresql",
+      "label": "PostgreSQL",
+      "backgroundColor": "#2f6c92",
+      "textColor": "#ffffff",
+      "borderColor": "transparent"
+    },
+    {
+      "id": "ogl",
+      "label": "OGL.js",
+      "backgroundColor": "#0e5495",
+      "textColor": "#ffffff",
+      "borderColor": "transparent"
+    },
+    {
+      "id": "glsl",
+      "label": "GLSL",
+      "backgroundColor": "#95630e",
+      "textColor": "#ffffff",
+      "borderColor": "transparent"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "streakon",
+      "contentMode": "built-in",
+      "enabled": true,
+      "theme": "dark",
+      "themeColors": {
+        "pageBackground": "#090909",
+        "contentBackground": "#141414",
+        "titleColor": "#ffffff",
+        "descriptionColor": "#ffffff",
+        "textColor": "#ffffff",
+        "mutedTextColor": "#c5c5c5",
+        "accentColor": "#fec600",
+        "accentTextColor": "#2c2c2c"
+      },
+      "tags": ["next", "node", "postgresql", "redis"],
+      "thumbnail": "",
+      "live": "https://www.streakon.app",
+      "source": "",
+      "media": [],
+      "localized": {
+        "vi": {
+          "title": "StreakOn",
+          "previewDescription": "Ứng dụng theo dõi thói quen xã hội",
+          "description": "StreakOn giúp các nhóm nhỏ duy trì thói quen hàng ngày thông qua chuỗi thành tích chung và thao tác check-in đơn giản.<br/><br/>Ứng dụng tập trung vào tương tác nhanh, trải nghiệm mobile và các tính năng xã hội nhẹ với Next.js, Node.js, PostgreSQL và Redis."
+        },
+        "en": {
+          "title": "StreakOn",
+          "previewDescription": "Social habit tracking app",
+          "description": "StreakOn helps small groups stay consistent with daily habits through shared streaks and simple check-ins.<br/><br/>The app was designed around low friction interactions, mobile usability, and lightweight social features, using Next.js, Node.js, PostgreSQL, and Redis."
+        },
+        "de": {
+          "title": "StreakOn",
+          "previewDescription": "App für tägliche Gewohnheiten",
+          "description": "StreakOn helps small groups stay consistent with daily habits through shared streaks and simple check-ins.<br/><br/>The app was designed around low friction interactions, mobile usability, and lightweight social features, using Next.js, Node.js, PostgreSQL, and Redis."
+        }
+      }
+    },
+    {
+      "slug": "cubewar",
+      "contentMode": "built-in",
+      "enabled": true,
+      "theme": "dark",
+      "themeColors": {
+        "pageBackground": "#1c2f4f",
+        "contentBackground": "#364e7c",
+        "titleColor": "#ffffff",
+        "descriptionColor": "#ffffff",
+        "textColor": "#ffffff",
+        "mutedTextColor": "#c3ccdb",
+        "accentColor": "#008dff",
+        "accentTextColor": "#ffffff"
+      },
+      "tags": ["three", "node", "websockets", "redis"],
+      "thumbnail": "",
+      "live": "https://cubewar.io",
+      "source": "",
+      "media": [],
+      "localized": {
+        "vi": {
+          "title": "CubeWar",
+          "previewDescription": "Game chiến thuật nhiều người chơi",
+          "description": "CubeWar là game multiplayer trên trình duyệt, nơi người chơi điều khiển các khối lập phương trong những trận chiến chiến thuật tốc độ cao.<br/><br/>Toàn bộ game engine, timeline phía client và mạng thời gian thực với matchmaking dựa trên Redis được xây dựng để xử lý đồng thời mượt mà."
+        },
+        "en": {
+          "title": "CubeWar",
+          "previewDescription": "Multiplayer strategy game",
+          "description": "CubeWar is a browser-based multiplayer game where players control cube avatars in fast-paced strategic battles.<br/><br/>I built the full stack myself, including the game engine, the client-side timeline system, and real-time networking with Redis-based matchmaking for smooth, high-concurrency gameplay."
+        },
+        "de": {
+          "title": "CubeWar",
+          "previewDescription": "Multiplayer-Strategiespiel",
+          "description": "CubeWar is a browser-based multiplayer game where players control cube avatars in fast-paced strategic battles.<br/><br/>I built the full stack myself, including the game engine, the client-side timeline system, and real-time networking with Redis-based matchmaking for smooth, high-concurrency gameplay."
+        }
+      }
+    },
+    {
+      "slug": "quibbo",
+      "contentMode": "built-in",
+      "enabled": true,
+      "theme": "light",
+      "themeColors": {
+        "pageBackground": "#ffffff",
+        "contentBackground": "#f3f7fa",
+        "titleColor": "#141d25",
+        "descriptionColor": "#141d25",
+        "textColor": "#141d25",
+        "mutedTextColor": "#485561",
+        "accentColor": "#1f81f9",
+        "accentTextColor": "#ffffff"
+      },
+      "tags": ["three", "node", "kubernetes", "redis", "postgresql"],
+      "thumbnail": "",
+      "live": "",
+      "source": "",
+      "media": [],
+      "localized": {
+        "vi": {
+          "title": "Quibbo",
+          "previewDescription": "Nền tảng game nhiều người chơi",
+          "description": "Quibbo là nền tảng dành cho các game multiplayer theo vòng đấu nhanh, kết hợp matchmaking, avatar 3D tùy chỉnh, tài khoản và phần thưởng xếp hạng.<br/><br/>Dự án phát triển từ một thử nghiệm kỹ thuật thành hệ thống có khả năng mở rộng để kiểm thử các ý tưởng game mới."
+        },
+        "en": {
+          "title": "Quibbo",
+          "previewDescription": "Multiplayer gaming platform",
+          "description": "Quibbo is a platform for fast, round-based multiplayer games. It brings together matchmaking, customizable 3D avatars, and account integration with ranked rewards.<br/><br/>The project started as a technical experiment and grew into a scalable system for testing new game ideas."
+        },
+        "de": {
+          "title": "Quibbo",
+          "previewDescription": "Multiplayer-Gaming-Plattform",
+          "description": "Quibbo is a platform for fast, round-based multiplayer games. It brings together matchmaking, customizable 3D avatars, and account integration with ranked rewards.<br/><br/>The project started as a technical experiment and grew into a scalable system for testing new game ideas."
+        }
+      }
+    },
+    {
+      "slug": "sharkie",
+      "contentMode": "built-in",
+      "enabled": true,
+      "theme": "light",
+      "themeColors": {
+        "pageBackground": "#16295e",
+        "contentBackground": "#263e82",
+        "titleColor": "#ffffff",
+        "descriptionColor": "#ffffff",
+        "textColor": "#ffffff",
+        "mutedTextColor": "#c6d2f2",
+        "accentColor": "#176cfe",
+        "accentTextColor": "#ffffff"
+      },
+      "tags": ["javascript", "html", "css"],
+      "thumbnail": "",
+      "live": "https://sharkie.david-hckh.com/",
+      "source": "https://github.com/davidhckh/sharkie-game",
+      "media": [],
+      "localized": {
+        "vi": {
+          "title": "Sharkie",
+          "previewDescription": "Game phiêu lưu 2D",
+          "description": "Sharkie là game phiêu lưu 2D dưới đại dương được xây dựng bằng JavaScript thuần và HTML5 Canvas.<br/><br/>Dự án sử dụng kiến trúc hướng đối tượng cho entity, enemy và các hệ thống game, cùng animation mượt, cơ chế chiến đấu và nền parallax nhiều lớp."
+        },
+        "en": {
+          "title": "Sharkie",
+          "previewDescription": "2D adventure game",
+          "description": "Sharkie is a 2D underwater adventure game built with vanilla JavaScript and HTML5 Canvas.<br/><br/>The project is structured around object-oriented programming principles, featuring custom classes for entities, enemies, and game systems, alongside smooth animations, combat mechanics, and layered parallax backgrounds."
+        },
+        "de": {
+          "title": "Sharkie",
+          "previewDescription": "2D-Abenteuerspiel",
+          "description": "Sharkie is a 2D underwater adventure game built with vanilla JavaScript and HTML5 Canvas.<br/><br/>The project is structured around object-oriented programming principles, featuring custom classes for entities, enemies, and game systems, alongside smooth animations, combat mechanics, and layered parallax backgrounds."
+        }
+      }
+    },
+    {
+      "slug": "pokedex",
+      "contentMode": "built-in",
+      "enabled": true,
+      "theme": "light",
+      "themeColors": {
+        "pageBackground": "#f9fbfe",
+        "contentBackground": "#e9edf6",
+        "titleColor": "#0c1b3a",
+        "descriptionColor": "#0c1b3a",
+        "textColor": "#0c1b3a",
+        "mutedTextColor": "#696f74",
+        "accentColor": "#ff5350",
+        "accentTextColor": "#ffffff"
+      },
+      "tags": ["javascript", "html", "css"],
+      "thumbnail": "",
+      "live": "https://pokedex.david-hckh.com/",
+      "source": "https://github.com/davidhckh/pokedex",
+      "media": [],
+      "localized": {
+        "vi": {
+          "title": "Pokédex",
+          "previewDescription": "Dự án học tập mã nguồn mở",
+          "description": "Một trong những dự án web đầu tiên dùng để luyện tập các khái niệm phát triển web cơ bản. Pokédex là mã nguồn mở để các lập trình viên khác có thể cùng học hỏi.<br/><br/>Dự án cũng tích hợp API công khai để thực hành xử lý dữ liệu bất đồng bộ."
+        },
+        "en": {
+          "title": "Pokédex",
+          "previewDescription": "Open-source learning project",
+          "description": "One of my first web projects to practice basic web development concepts. The Pokédex is open source so other developers can learn the same way I did.<br/><br/>It also interacts with a public API, to get more experience with asynchronous data fetching."
+        },
+        "de": {
+          "title": "Pokédex",
+          "previewDescription": "Open-Source Lernprojekt",
+          "description": "One of my first web projects to practice basic web development concepts. The Pokédex is open source so other developers can learn the same way I did.<br/><br/>It also interacts with a public API, to get more experience with asynchronous data fetching."
+        }
+      }
+    }
+  ],
+  "footer": {
+    "copyrightName": "David Heckhoff",
+    "conceptCreditName": "David Heckhoff",
+    "conceptCreditUrl": "https://david-hckh.com",
+    "musicCreditName": "HM Surf",
+    "musicCreditUrl": "https://soundcloud.com/hmsurf"
+  },
+  "seo": {
+    "title": "David Heckhoff - Web Developer (WebGL & Node.js)",
+    "description": "Web developer creating interactive 3D web experiences and real-time apps with WebGL, TypeScript, and Node.js for high-performance, engaging websites.",
+    "canonicalUrl": "https://david-hckh.com/",
+    "ogImage": "https://david-hckh.com/meta/og-image.webp",
+    "twitterImage": "https://david-hckh.com/meta/twitter-image.webp"
+  }
+}
