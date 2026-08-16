@@ -10,6 +10,7 @@ import ButtonRound from "./ButtonRound.vue";
 import { lenis } from "../composables/useScroll";
 import ArrowRightLong from "./icons/ArrowRightLong.vue";
 import { getLanguageBaseLocale, getLocalizedPortfolio, portfolioData } from "../content/portfolio";
+import { withBasePath } from "../utils/basePath";
 
 interface Props {
   withSocial?: boolean;
@@ -52,7 +53,7 @@ const copyrightText = computed(() =>
           <div class="footer-top-links-legal">
             <Clickable renderAs="div">
               <Link
-                :href="getLanguageBaseLocale(locale) === 'de' ? '/de/privacy' : '/privacy'"
+                :href="withBasePath(getLanguageBaseLocale(locale) === 'de' ? '/de/privacy.html' : '/privacy.html')"
                 class="footer-link"
                 :external="true"
                 data-cursor="circle-white"
@@ -63,7 +64,7 @@ const copyrightText = computed(() =>
             </Clickable>
             <Clickable renderAs="div">
               <Link
-                :href="getLanguageBaseLocale(locale) === 'de' ? '/de/legal' : '/legal'"
+                :href="withBasePath(getLanguageBaseLocale(locale) === 'de' ? '/de/legal.html' : '/legal.html')"
                 class="footer-link children-unclickable"
                 :external="true"
                 data-cursor="circle-white"

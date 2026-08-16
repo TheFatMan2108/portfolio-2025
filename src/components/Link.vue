@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, useAttrs } from "vue";
 import { useRouter } from "../composables/useRouter";
+import { withBasePath } from "../utils/basePath";
 
 const attrs = useAttrs();
 const router = useRouter();
@@ -24,6 +25,8 @@ const resolvedTo = computed(() => {
 
   return path;
 });
+
+const deploymentHref = computed(() => withBasePath(resolvedTo.value));
 
 const handleClick = (event: MouseEvent) => {
   // Don't interfere with external links or if modifier keys are pressed
@@ -55,13 +58,7 @@ const handleClick = (event: MouseEvent) => {
     <slot></slot>
   </component>
 
-  <component
-    v-else
-    :is="props.renderAs || 'a'"
-    :href="resolvedTo"
-    @click="handleClick"
-    v-bind="attrs"
-  >
+  <component v-else :is="props.renderAs || 'a'" :href="deploymentHref" @click="handleClick" v-bind="attrs">
     <slot></slot>
   </component>
 </template>

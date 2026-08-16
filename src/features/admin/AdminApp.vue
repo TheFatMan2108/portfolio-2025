@@ -18,6 +18,7 @@ import {
   savePortfolioData,
 } from "../../content/portfolio";
 import { translateTextMap } from "./translationService";
+import { withBasePath } from "../../utils/basePath";
 
 import type { Component } from "vue";
 import type {
@@ -686,7 +687,9 @@ const removeProjectMedia = (projectIndex: number, mediaIndex: number): void => {
         <h1>Quản lý nội dung</h1>
         <p class="admin-subtitle">Nguồn mặc định: <code>src/content/portfolio-data.json</code></p>
       </div>
-      <a class="button button-secondary" href="/" target="_blank" rel="noopener noreferrer">Xem Portfolio ↗</a>
+      <a class="button button-secondary" :href="withBasePath('/')" target="_blank" rel="noopener noreferrer"
+        >Xem Portfolio ↗</a
+      >
     </header>
 
     <div class="admin-notice">

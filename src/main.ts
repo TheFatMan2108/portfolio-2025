@@ -3,10 +3,11 @@ import "./assets/styles/index.scss";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { applyPortfolioSeo } from "./content/portfolio";
+import { getAppPath } from "./utils/basePath";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const normalizedPath = window.location.pathname.replace(/\/+$/, "") || "/";
+const normalizedPath = getAppPath(window.location.pathname);
 const isAdminPage = normalizedPath === "/admin";
 const rootModule = isAdminPage ? await import("./features/admin/AdminApp.vue") : await import("./App.vue");
 
