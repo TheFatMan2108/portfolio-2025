@@ -1,10 +1,12 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import glsl from "vite-plugin-glsl";
+import { createPortfolioAdminPlugin } from "./build/portfolioAdminPlugin";
 
 export default defineConfig({
   base: process.env.BASE_PATH?.trim() || "/",
   plugins: [
+    createPortfolioAdminPlugin(),
     vue(),
     glsl({
       include: ["**/*.glsl", "**/*.vert", "**/*.frag"],
@@ -15,7 +17,7 @@ export default defineConfig({
   server: {
     port: 3000,
     strictPort: true,
-    host: true,
+    host: "127.0.0.1",
   },
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".ogg", ".wav", ".glsl", ".ktx2"],
